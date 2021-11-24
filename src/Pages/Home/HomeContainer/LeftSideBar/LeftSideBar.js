@@ -12,6 +12,19 @@ import ListItemText from '@mui/material/ListItemText';
 import MailIcon from '@mui/icons-material/Mail';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import RssFeedIcon from '@mui/icons-material/RssFeed';
+import ChatIcon from '@mui/icons-material/Chat';
+import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
+import GroupIcon from '@mui/icons-material/Group';
+import BookmarksIcon from '@mui/icons-material/Bookmarks';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
+import EventIcon from '@mui/icons-material/Event';
+import SchoolIcon from '@mui/icons-material/School';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import Person from '../../../../images/person/10.jpeg'
+
 
 const drawerWidth = 200;
 
@@ -26,25 +39,86 @@ const LeftSideBar = (props) => {
     const drawer = (
         <div >
             <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {['NewsFeed', 'Chat'].map((text, index) => (
+                    <ListItem sx={{ p: '1px 10px' }} button key={text}>
+                        <ListItemIcon sx={{ mr: '-20px' }}>
+                            {index % 2 === 0 ? <RssFeedIcon /> : <ChatIcon />}
                         </ListItemIcon>
                         <ListItemText primary={text} />
                     </ListItem>
                 ))}
             </List>
-            <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+
+            <List sx={{ mt: '-15px' }}>
+                {['Videos', 'Groups'].map((text, index) => (
+                    <ListItem sx={{ p: '1px 10px' }} button key={text}>
+                        <ListItemIcon sx={{ mr: '-20px' }}>
+                            {index % 2 === 0 ? <PlayCircleOutlineIcon /> : <GroupIcon />}
                         </ListItemIcon>
                         <ListItemText primary={text} />
                     </ListItem>
                 ))}
+            </List>
+
+            <List sx={{ mt: '-15px' }}>
+                {['Bookmarks', 'Questions'].map((text, index) => (
+                    <ListItem sx={{ p: '1px 10px' }} button key={text}>
+                        <ListItemIcon sx={{ mr: '-20px' }}>
+                            {index % 2 === 0 ? <BookmarksIcon /> : <HelpOutlineIcon />}
+                        </ListItemIcon>
+                        <ListItemText primary={text} />
+                    </ListItem>
+                ))}
+            </List>
+
+            <List sx={{ mt: '-15px' }}>
+                {['Jobs', 'Events'].map((text, index) => (
+                    <ListItem sx={{ p: '1px 10px' }} button key={text}>
+                        <ListItemIcon sx={{ mr: '-20px' }}>
+                            {index % 2 === 0 ? <WorkOutlineIcon /> : <EventIcon />}
+                        </ListItemIcon>
+                        <ListItemText primary={text} />
+                    </ListItem>
+                ))}
+            </List>
+
+            <List sx={{ mt: '-15px' }}>
+                {['Courses', ''].map((text, index) => (
+                    <ListItem sx={{ p: '1px 10px' }} button key={text}>
+                        <ListItemIcon sx={{ mr: '-20px' }}>
+                            {index % 2 === 0 ? <SchoolIcon /> : ''}
+                        </ListItemIcon>
+                        <ListItemText primary={text} />
+                    </ListItem>
+                ))}
+                <Button variant="outlined" size="medium">Show More</Button>
+            </List>
+
+            <Divider />
+
+            <List sx={{ display: 'flex', alignItems: 'center', p: '10px' }}>
+                <Avatar alt="Travis Howard" src={Person} />
+                <Typography sx={{ ml: '5px' }}>John Doe</Typography>
+            </List>
+            <List sx={{ display: 'flex', alignItems: 'center', p: '10px' }}>
+                <Avatar alt="Travis Howard" src={Person} />
+                <Typography sx={{ ml: '5px' }}>John Doe</Typography>
+            </List>
+            <List sx={{ display: 'flex', alignItems: 'center', p: '10px' }}>
+                <Avatar alt="Travis Howard" src={Person} />
+                <Typography sx={{ ml: '5px' }}>John Doe</Typography>
+            </List>
+            <List sx={{ display: 'flex', alignItems: 'center', p: '10px' }}>
+                <Avatar alt="Travis Howard" src={Person} />
+                <Typography sx={{ ml: '5px' }}>John Doe</Typography>
+            </List>
+            <List sx={{ display: 'flex', alignItems: 'center', p: '10px' }}>
+                <Avatar alt="Travis Howard" src={Person} />
+                <Typography sx={{ ml: '5px' }}>John Doe</Typography>
+            </List>
+            <List sx={{ display: 'flex', alignItems: 'center', p: '10px' }}>
+                <Avatar alt="Travis Howard" src={Person} />
+                <Typography sx={{ ml: '5px' }}>John Doe</Typography>
             </List>
         </div>
     );
