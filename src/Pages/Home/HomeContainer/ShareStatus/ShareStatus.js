@@ -4,11 +4,12 @@ import Paper from '@mui/material/Paper';
 import Avatar from '@mui/material/Avatar';
 import Person1 from '../../../../images/person/1.jpeg';
 import './shareStatus.css'
-import { Divider } from '@mui/material';
+import { Button, Divider } from '@mui/material';
 import PermMediaIcon from '@mui/icons-material/PermMedia';
 import LabelIcon from '@mui/icons-material/Label';
 import RoomIcon from '@mui/icons-material/Room';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
+import { Box } from '@mui/system';
 
 
 const ShareStatus = () => {
@@ -25,24 +26,28 @@ const ShareStatus = () => {
 
             <Divider sx={{ mt: 2, mb: 1 }} />
 
-            <Grid sx={{ flexDirection: 'row' }} container spacing={2}>
-                <Grid item sx={{ display: 'flex', alignItems: 'center', }}>
-                    <PermMediaIcon sx={{ color: 'tomato' }} />
-                    <span style={{ marginLeft: '5px' }}>Photo or Video</span>
+            <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: { xs: 'flext-start', md: 'center' }, justifyContent: 'space-around' }}>
+                <Grid sx={{ flexDirection: 'row' }} container spacing={2}>
+                    <Grid item sx={{ display: 'flex', alignItems: 'center', }}>
+                        <PermMediaIcon sx={{ color: 'tomato' }} />
+                        <span style={{ marginLeft: '5px' }}>Photo/Video</span>
+                    </Grid>
+                    <Grid item sx={{ display: 'flex', alignItems: 'center', }}>
+                        <LabelIcon sx={{ color: 'blue' }} />
+                        <span style={{ marginLeft: '5px' }}>Tag People</span>
+                    </Grid>
+                    <Grid item sx={{ display: 'flex', alignItems: 'center', }}>
+                        <EmojiEmotionsIcon sx={{ color: 'goldenrod' }} />
+                        <span style={{ marginLeft: '5px' }}>Feeling/Activity</span>
+                    </Grid>
+                    <Grid item sx={{ display: 'flex', alignItems: 'center', }}>
+                        <RoomIcon sx={{ color: 'green' }} />
+                        <span style={{ marginLeft: '5px' }}>Check In</span>
+                    </Grid>
                 </Grid>
-                <Grid item sx={{ display: 'flex', alignItems: 'center', }}>
-                    <LabelIcon sx={{ color: 'blue' }} />
-                    <span style={{ marginLeft: '5px' }}>Tag</span>
-                </Grid>
-                <Grid item sx={{ display: 'flex', alignItems: 'center', }}>
-                    <RoomIcon sx={{ color: 'green' }} />
-                    <span style={{ marginLeft: '5px' }}>Location</span>
-                </Grid>
-                <Grid item sx={{ display: 'flex', alignItems: 'center', }}>
-                    <EmojiEmotionsIcon sx={{ color: 'goldenrod' }} />
-                    <span style={{ marginLeft: '5px' }}>Feelings</span>
-                </Grid>
-            </Grid>
+                <Button sx={{ textTransform: 'capitalize', mt: { xs: '5px', md: 0 } }} variant='contained' size='small'>Share</Button>
+            </Box>
+
         </Paper>
     );
 };
