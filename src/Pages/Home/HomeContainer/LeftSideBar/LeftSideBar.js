@@ -22,6 +22,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Person from '../../../../images/person/10.jpeg'
 import ShareStatus from '../ShareStatus/ShareStatus';
+import Post from '../Post/Post';
 
 
 const drawerWidth = 240;
@@ -166,6 +167,9 @@ const LeftSideBar = (props) => {
             >
                 {/* <Toolbar /> */}
                 <ShareStatus></ShareStatus>
+                <Post></Post>
+                <Post></Post>
+                <Post></Post>
             </Box>
         </Box>
     );

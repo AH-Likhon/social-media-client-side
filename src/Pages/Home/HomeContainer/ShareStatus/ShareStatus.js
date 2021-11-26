@@ -14,10 +14,10 @@ import { Box } from '@mui/system';
 
 const ShareStatus = () => {
     return (
-        <Paper sx={{ p: 2, m: 'auto', maxWidth: 700, flexGrow: 1, boxShadow: 4 }}>
+        <Paper sx={{ p: 2, mt: '60px', mx: 'auto', maxWidth: 700, flexGrow: 1, boxShadow: 4 }}>
             <Grid container spacing={2}>
                 <Grid item>
-                    <Avatar sx={{ width: 50, height: 50, mt: 0 }} alt="Travis Howard" src={Person1} />
+                    <Avatar sx={{ width: 50, height: 50, mt: 0 }} alt="Social Profile" src={Person1} />
                 </Grid>
                 <Grid sx={{ mt: 1 }} item xs={12} sm container>
                     <textarea className='inputStyle' style={{ width: '100%', border: 'none' }} placeholder="What's on your mind, Md?" />
